@@ -1,6 +1,8 @@
 package W2HW2;
 
-public class Employee extends Person implements PersonInterface{
+import java.util.Scanner;
+
+public class Employee extends Person implements PersonInterface {
 
 
     int empNum = 1000;
@@ -23,6 +25,38 @@ public class Employee extends Person implements PersonInterface{
         this.empSalary = empSalary;
         empNum++;
     }
+public void scanner() {
+
+    Scanner input = new Scanner(System.in);
+
+        System.out.println("Enter employee first name: ");
+		fName = input.nextLine();
+
+		System.out.println("Enter employee last name: ");
+		lName = input.nextLine();
+
+		System.out.println("Enter employee age: ");
+		age = input.nextInt();
+
+		System.out.println("Enter employee gender: ");
+		gender = input.next().charAt(0);
+
+		System.out.println("Enter employee street: ");
+        input.nextLine();
+		street = input.nextLine();
+
+		System.out.println("Enter employee city: ");
+		city = input.nextLine();
+
+		System.out.println("Enter employee state: ");
+		state = input.nextLine();
+
+		System.out.println("Enter employee zip: ");
+		zipcode = input.nextInt();
+
+        System.out.println("Enter employee Salary: ");
+        empSalary = input.nextDouble();
+}
     public void display() {
         super.display();
         System.out.println("Employee Number: " + this.empNum);

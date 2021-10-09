@@ -1,5 +1,5 @@
 package W2HW2;
-
+import java.util.Scanner;
 public class Person1 extends Person {
 
     private long ssn;
@@ -15,6 +15,44 @@ public Person1( String fName, String lName, int age, char gender, long ssn, long
 
     this.ssn = ssn;
     this.phone = phone;
+}
+public void scanner() {
+
+    Scanner input = new Scanner(System.in);
+
+            System.out.println("Enter person first name: ");
+//        input.nextLine();
+        fName = input.nextLine();
+
+        System.out.println("Enter person last name: ");
+        lName = input.nextLine();
+
+        System.out.println("Enter person age: ");
+        age = input.nextInt();
+
+        System.out.println("Enter person gender: ");
+        gender = input.next().charAt(0);
+
+        System.out.println("Enter person street: ");
+        input.nextLine();
+        street = input.nextLine();
+
+        System.out.println("Enter person city: ");
+        city = input.nextLine();
+
+        System.out.println("Enter person state: ");
+        state = input.nextLine();
+
+        System.out.println("Enter person zip: ");
+        zipcode = input.nextInt();
+
+        System.out.println("Enter person ssn: ");
+        ssn = input.nextLong();
+
+    System.out.println("Enter person phone: ");
+    phone = input.nextLong();
+
+
 }
     public long getSsn() {
         return ssn;
@@ -35,6 +73,12 @@ public Person1( String fName, String lName, int age, char gender, long ssn, long
         System.out.println("ssn:" + this.ssn);
         System.out.println("phone:" + this.phone);
     }
+//    public static void main(String[] args) {
+//
+//        Scanner input = new Scanner(System.in);
+//        System.out.println("Enter person ssn: ");
+//        ssn = input.nextInt();
+//    }
 }
 //    public double calculate(int x) {
 //

@@ -1,4 +1,5 @@
 package W2HW2;
+import java.util.Scanner;
 
 public class Student extends Person implements PersonInterface{
 
@@ -22,7 +23,47 @@ public class Student extends Person implements PersonInterface{
         this.subject3 = subject3;
         studNum++;
     }
+    public void scanner() {
 
+        Scanner input = new Scanner(System.in);
+        System.out.println("Enter student first name: ");
+        fName = input.nextLine();
+
+        System.out.println("Enter student last name: ");
+        lName = input.nextLine();
+
+        System.out.println("Enter student age: ");
+        age = input.nextInt();
+
+        System.out.println("Enter student gender: ");
+        gender = input.next().charAt(0);
+
+        System.out.println("Enter student street: ");
+        input.nextLine();
+        street = input.nextLine();
+
+        System.out.println("Enter student city: ");
+        city = input.nextLine();
+
+        System.out.println("Enter student state: ");
+        state = input.nextLine();
+
+        System.out.println("Enter student zip: ");
+        zipcode = input.nextInt();
+
+        System.out.println("Enter student major: ");
+        input.nextLine();
+        studMajor = input.nextLine();
+
+		System.out.println("Enter student subject1 score: ");
+		subject1 = input.nextDouble();
+
+		System.out.println("Enter student subject2 score: ");
+		subject2 = input.nextDouble();
+
+		System.out.println("Enter student subject3 score: ");
+		subject3 = input.nextDouble();
+    }
     public void display() {
         super.display();
         System.out.println("Student Number " + this.studNum);
