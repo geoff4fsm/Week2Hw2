@@ -1,6 +1,4 @@
 package W2HW2;
-import java.util.Scanner;
-import   java.lang.*;
 public class Student extends Person implements PersonInterface{
 
 
@@ -59,14 +57,14 @@ public class Student extends Person implements PersonInterface{
         input.nextLine();
         studMajor = input.nextLine();
 
-		System.out.println("How many courses this semester: ");
-		subject1 = input.nextDouble();
+        System.out.println("How many courses this semester: ");
+        subject1 = input.nextDouble();
 
-		System.out.println("Enter student subject2 score: ");
-		subject2 = input.nextDouble();
+        System.out.println("Enter student subject2 score: ");
+        subject2 = input.nextDouble();
 
-		System.out.println("Enter student subject3 score: ");
-		subject3 = input.nextDouble();
+        System.out.println("Enter student subject3 score: ");
+        subject3 = input.nextDouble();
     }
 
     public void display() {
@@ -77,7 +75,7 @@ public class Student extends Person implements PersonInterface{
         System.out.println("Subject Two Score " + this.subject2);
         System.out.println("Subject Three Score " + this.subject3);
         System.out.println(calculate(3));
-//        System.out.println(compute(3, 4));
+        System.out.println(compute(3, 4));
     }
 
     //	@Override
@@ -88,9 +86,9 @@ public class Student extends Person implements PersonInterface{
     }
 
     //	@Override
-//    public double compute(int totalSubjects, int creditHours) {
-//        double credits = totalSubjects * creditHours;
-//        return credits;
-//    }
+    public double compute(int totalSubjects, int creditHours) {
+        double credits = totalSubjects * creditHours;
+        return credits;
+    }
 
 }
