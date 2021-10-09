@@ -1,4 +1,5 @@
 package W2HW2;
+import java.util.Scanner;
 public class Student extends Person implements PersonInterface{
 
 
