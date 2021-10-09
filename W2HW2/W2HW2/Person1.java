@@ -21,7 +21,7 @@ public void scanner() {
     Scanner input = new Scanner(System.in);
 
             System.out.println("Enter person first name: ");
-        input.nextLine();
+//        input.nextLine();
         fName = input.nextLine();
 
         System.out.println("Enter person last name: ");
@@ -32,6 +32,10 @@ public void scanner() {
 
         System.out.println("Enter person gender: ");
         gender = input.next().charAt(0);
+            while (!(gender=='m') && !(gender=='f') && !(gender=='t')) {
+                System.out.println("m,f or t only please try again");
+                gender = input.next().charAt(0);
+            }
 
         System.out.println("Enter person street: ");
         input.nextLine();
@@ -47,10 +51,7 @@ public void scanner() {
         zipcode = input.nextInt();
 
         System.out.println("Enter person ssn: ");
-        ssn = input.nextInt();
-
-    System.out.println("Enter person ssn: ");
-    ssn = input.nextLong();
+        ssn = input.nextLong();
 
     System.out.println("Enter person phone: ");
     phone = input.nextLong();

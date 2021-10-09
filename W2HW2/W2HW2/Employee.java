@@ -1,5 +1,4 @@
 package W2HW2;
-
 import java.util.Scanner;
 
 public class Employee extends Person implements PersonInterface {
@@ -30,7 +29,6 @@ public void scanner() {
     Scanner input = new Scanner(System.in);
 
         System.out.println("Enter employee first name: ");
-        input.nextLine();
 		fName = input.nextLine();
 
 		System.out.println("Enter employee last name: ");
@@ -41,7 +39,10 @@ public void scanner() {
 
 		System.out.println("Enter employee gender: ");
 		gender = input.next().charAt(0);
-
+            while (!(gender=='m') && !(gender=='f') && !(gender=='t')) {
+                System.out.println("m,f or t only please try again");
+                gender = input.next().charAt(0);
+            }
 		System.out.println("Enter employee street: ");
         input.nextLine();
 		street = input.nextLine();
@@ -63,7 +64,7 @@ public void scanner() {
         System.out.println("Employee Number: " + this.empNum);
         System.out.println("Employee Salary " + this.empSalary);
         System.out.println(calculate(10));
-        System.out.println(compute(7, 15));
+//        System.out.println(compute(7, 15));
     }
     //	@Override
     public double calculate(int num) {
@@ -72,10 +73,10 @@ public void scanner() {
     }
 
     //	@Override
-    public double compute(int num1, int num2) {
-        hours = num2 - num1;
-        return hours;
-    }
+//    public double compute(int num1, int num2) {
+//        hours = num2 - num1;
+//        return hours;
+//    }
 
 
 }
