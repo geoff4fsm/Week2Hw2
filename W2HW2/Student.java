@@ -58,7 +58,7 @@ public class Student extends Person implements PersonInterface{
         input.nextLine();
         studMajor = input.nextLine();
 
-        System.out.println("How many courses this semester: ");
+        System.out.println("Enter student subject1 score: ");
         subject1 = input.nextDouble();
 
         System.out.println("Enter student subject2 score: ");
