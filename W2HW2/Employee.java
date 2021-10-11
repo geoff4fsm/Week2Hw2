@@ -4,7 +4,7 @@ import java.util.Scanner;
 public class Employee extends Person implements PersonInterface {
 
 
-    int empNum = 1000;
+    int empNum = 1000, empBonus, vacDays, sickDays, daysOff;
     String jobTitle;
     String hireDate;
     double empSalary, bonus, hours;
@@ -14,7 +14,7 @@ public class Employee extends Person implements PersonInterface {
         empNum++;
     }
 
-    Employee(String fName, String lName, int age, char gender, int empNum, String jobTitle, String hireDate, double empSalary) {
+    Employee(String fName, String lName, int age, char gender, int empNum, String jobTitle, String hireDate, double empSalary, int vacDays, int sickDays) {
 
         super(fName, lName, age, gender);
 
@@ -22,6 +22,8 @@ public class Employee extends Person implements PersonInterface {
         this.jobTitle = jobTitle;
         this.hireDate = hireDate;
         this.empSalary = empSalary;
+        this.vacDays = vacDays;
+        this.sickDays = sickDays;
         empNum++;
     }
 public void scanner() {
@@ -56,27 +58,45 @@ public void scanner() {
 		System.out.println("Enter employee zip: ");
 		zipcode = input.nextInt();
 
+        System.out.println("Enter employee hire date: ");
+        input.nextLine();
+        hireDate = input.nextLine();
+
+        System.out.println("Enter employee job title: ");
+        jobTitle = input.nextLine();
+
         System.out.println("Enter employee Salary: ");
         empSalary = input.nextDouble();
+
+        System.out.println("End of year bonus % ");
+        empBonus = input.nextInt();
+
+        System.out.println("Enter number of vacation days: ");
+        vacDays = input.nextInt();
+
+        System.out.println("Enter number of sick days: ");
+        sickDays = input.nextInt();
 }
     public void display() {
         super.display();
         System.out.println("Employee Number: " + this.empNum);
         System.out.println("Employee Salary " + this.empSalary);
-        System.out.println(calculate(10));
-//        System.out.println(compute(7, 15));
+        System.out.println("Employee Job Title: " + this.jobTitle);
+        System.out.println("Employee Hire Date " + this.hireDate);
+        System.out.println("End of year bonus = " + calculate(empBonus));
+        System.out.println(compute(7, 15));
     }
     //	@Override
     public double calculate(int num) {
-        bonus = empSalary / num;
+        bonus = empSalary / empBonus;
         return bonus;
     }
 
     //	@Override
-//    public double compute(int num1, int num2) {
-//        hours = num2 - num1;
-//        return hours;
-//    }
+    public double compute(int num1, int num2) {
+        daysOff = vacDays + sickDays;
+        return daysOff;
+    }
 
 
 }

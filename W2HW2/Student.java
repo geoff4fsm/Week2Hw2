@@ -1,11 +1,18 @@
 package W2HW2;
+import java.util.ArrayList;
 import java.util.Scanner;
-public class Student extends Person implements PersonInterface{
+public class Student extends Person /*implements PersonInterface*/ {
 
 
-    int studNum = 1000;
-    String studMajor;
-    double subject1, subject2, subject3;
+    int studNum = 1000, numCourses;
+    String studMajor, courseName;
+    double subject1, subject2, subject3 , courseScore;
+
+
+
+//    Course[] courseArray = new W2HW2.Course[numCourses] ;
+//    private Object Course;
+
 
     Student(){
         studNum++;
@@ -21,7 +28,9 @@ public class Student extends Person implements PersonInterface{
         this.subject2 = subject2;
         this.subject3 = subject3;
         studNum++;
+
     }
+
     public void scanner() {
 
         Scanner input = new Scanner(System.in);
@@ -58,38 +67,60 @@ public class Student extends Person implements PersonInterface{
         input.nextLine();
         studMajor = input.nextLine();
 
-        System.out.println("Enter student subject1 score: ");
-        subject1 = input.nextDouble();
-
-        System.out.println("Enter student subject2 score: ");
-        subject2 = input.nextDouble();
-
-        System.out.println("Enter student subject3 score: ");
-        subject3 = input.nextDouble();
+//        System.out.println("How many courses this semester? ");
+//        numCourses = input.nextInt();
+//
+//        ArrayList<Course> courseList = new ArrayList<>();
+//        for (int i = 0 ; i < numCourses ; i++) {
+////            course[i] = new Course[i];
+//
+//            System.out.println("Enter Course Name: ");
+//            input.nextLine();
+//            courseName = input.nextLine();
+////            courseList.add(new Course(courseName));
+//
+//            System.out.println("Enter Course Score: ");
+////            input.nextDouble();
+//            courseScore = input.nextDouble();
+////            courseScore[i]=(courseScore);
+//            courseList.add(new Course(courseName, courseScore));
+//            System.out.println(courseList);
+////            System.out.println(Course);
+////            courseList = new Course();
+//        }
+//
     }
+//    Course CourseObject = new Course();
 
     public void display() {
         super.display();
         System.out.println("Student Number " + this.studNum);
         System.out.println("Student Major " + this.studMajor);
-        System.out.println("Subject One Score " + this.subject1);
-        System.out.println("Subject Two Score " + this.subject2);
-        System.out.println("Subject Three Score " + this.subject3);
-        System.out.println(calculate(3));
-        System.out.println(compute(3, 4));
+
+ //       W2HW2.Course[] courses;
+
+
+//        for (int i = 0 ; i < numCourses ; i++ ) {
+//            System.out.println("inside for loop");
+//            System.out.println(" Course " + this.courseName[i]);
+//            System.out.println(" Score " + Course[i].courseScore());
+//        }
+//        System.out.println(calculate(numCourses));
+////        System.out.println(compute(3, 4));
+//
     }
 
     //	@Override
-    public double calculate(int totalSubjects) {
-        double average = ((this.subject1 + this.subject2 + this.subject3)/totalSubjects);
-        return average;
-
-    }
+//    public double calculate(int totalSubjects) {
+//        double average = ((this.subject1 + this.subject2 + this.subject3)/totalSubjects);
+//        return average;
+//
+//    }
 
     //	@Override
-    public double compute(int totalSubjects, int creditHours) {
-        double credits = totalSubjects * creditHours;
-        return credits;
-    }
+//    public double compute(int totalSubjects, int creditHours) {
+//        double credits = totalSubjects * creditHours;
+//        return credits;
+//    }
 
 }

@@ -6,6 +6,6 @@ public interface PersonInterface {
 
     double calculate(int num);
 
- //   double compute(int num1, int num2);
+    double compute(int num1, int num2);
 }
 
